@@ -4,9 +4,14 @@ Resources:
   HelloWorldPythonFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri: src/python
+      CodeUri: python
       Handler: app.lambda_handler
       Runtime: python3.9
+
+      AutoPublishAlias: live
+
+      DeploymentPreference:
+        Type: Canary10Percent5Minutes
 
 Outputs:
   HelloWorldPythonFunctionArn:
