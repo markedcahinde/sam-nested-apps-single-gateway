@@ -10,12 +10,12 @@ Resources:
   NodeTemplate:
     Type: AWS::Serverless::Application
     Properties:
-      Location: ./template-function.yaml
+      Location: ./src/template-function.yaml
 
   PythonTemplate:
     Type: AWS::Serverless::Application
     Properties:
-      Location: ./hello-world-python.yaml
+      Location: ./src/hello-world-python.yaml
 
   Api:
     Type: AWS::Serverless::Api
@@ -35,7 +35,7 @@ Resources:
         'Fn::Transform':
           Name: AWS::Include
           Parameters:
-            Location: api.yaml
+            Location: ./src/api.yaml
 
   HelloWorldLambdaPermission:
     Type: AWS::Lambda::Permission
