@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "simple-node-api"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-kmuk81c7nkae"
+s3_prefix = "simple-node-api"
+region = "eu-west-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM CAPABILITY_AUTO_EXPAND"
+image_repositories = []
